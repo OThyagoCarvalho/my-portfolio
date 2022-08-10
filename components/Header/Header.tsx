@@ -42,7 +42,7 @@ export default function Header() {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">Blog</Link>
+                            <Link href="/blog">Blog</Link>
                         </li>
                         <li>
                             <Link href="/">Utilidades</Link>
@@ -69,7 +69,7 @@ export default function Header() {
                                 </Dropdown.Item>
                                 <Dropdown.Item key="blog">
                                     <li>
-                                        <Link href="/">Blog</Link>
+                                        <Link href="/blog">Blog</Link>
                                     </li>
                                 </Dropdown.Item>
                                 <Dropdown.Item key="utilities">
