@@ -11,7 +11,8 @@ export default function Hero() {
                     className={styles.heroText}
                     h1
                     css={{
-                        textGradient: '10deg, $success 30%, $green700 50%',
+                        color: "$green800",
+                        // textGradient: '360deg, $green700 -20%, $green900 90%',
                         lineHeight: theme?.lineHeights.xs.value,
                         textAlign: 'justify',                                          
                         padding: theme?.space[2].value

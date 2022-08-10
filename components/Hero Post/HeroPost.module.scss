@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.heroPostDetails {
+  margin-top: 2rem;  
+  max-width: 47.5%;
+
+  @media(max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+.heroPostTitle {
+  font-size: clamp(1.75rem, 4.50vw + 1rem, 3rem);
+  line-height: 1.10;
+  font-weight: bold;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.heroPostExcerpt { 
+    font-size: clamp(1rem, 0.8vw + 0.92rem, 1.5rem);   
+    text-align: justify;
+    margin: 0;  
+    line-height: 1.10;
+}
