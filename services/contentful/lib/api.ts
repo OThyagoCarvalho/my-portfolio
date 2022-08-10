@@ -106,6 +106,20 @@ export async function getPostsForHome(preview = false) {
     return extractPostEntries(entries);
 }
 
+export async function getAllPostsForBlog(preview = false ) {
+    const entries = await fetchGraphQL(
+        `query {
+      postCollection(order: date_DESC, preview: ${preview ? 'true' : 'false'}) {
+        items {
+          ${POST_PREVIEW_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+        preview
+    );
+    return extractPostEntries(entries);
+}
+
 export async function getPostAndMorePosts(slug: any, preview: any) {
     const entry = await fetchGraphQL(
         `query {
