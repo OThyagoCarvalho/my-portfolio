@@ -38,7 +38,7 @@ content {
 //   }
 // }
 
-async function fetchGraphQL(query, preview = false) {
+async function fetchGraphQL(query:any, preview = false) {
     return fetch(
         `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
         {
@@ -56,15 +56,15 @@ async function fetchGraphQL(query, preview = false) {
     ).then(response => response.json());
 }
 
-function extractPost(fetchResponse) {
+function extractPost(fetchResponse: any) {
     return fetchResponse?.data?.postCollection?.items?.[0];
 }
 
-function extractPostEntries(fetchResponse) {
+function extractPostEntries(fetchResponse: any) {
     return fetchResponse?.data?.postCollection?.items;
 }
 
-export async function getPreviewPostBySlug(slug) {
+export async function getPreviewPostBySlug(slug: any) {
     const entry = await fetchGraphQL(
         `query {
       postCollection(where: { slug: "${slug}" }, preview: true, limit: 1) {
@@ -106,7 +106,7 @@ export async function getPostsForHome(preview = false) {
     return extractPostEntries(entries);
 }
 
-export async function getPostAndMorePosts(slug, preview) {
+export async function getPostAndMorePosts(slug: any, preview: any) {
     const entry = await fetchGraphQL(
         `query {
       postCollection(where: { slug: "${slug}" }, preview: ${
