@@ -63,9 +63,7 @@ export default function Header() {
                                 color="success"
                             >
                                 <Dropdown.Item key="home">
-                                    <li>
-                                        <Link href="/">Home</Link>
-                                    </li>
+                                    <Link href="/">Home</Link>
                                 </Dropdown.Item>
                                 <Dropdown.Item key="blog">
                                     <li>
