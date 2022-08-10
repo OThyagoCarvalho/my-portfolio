@@ -5,7 +5,7 @@ import PostPreview from '../components/Post Preview/PostPreview';
 import { getPostsForHome } from '../services/contentful/lib/api';
 
 const Home: NextPage = ({ preview, allPosts }: any) => {
-    console.log(allPosts);
+    
     return (
         <main>
             <Hero />

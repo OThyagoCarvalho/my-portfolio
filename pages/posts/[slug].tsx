@@ -11,6 +11,7 @@ import {
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import CoverImage from '../../components/Post Components/CoverImage';
+import DateComponent from '../../components/Post Components/DateComponent';
 // import RichTextAsset from './rich-text-asset'
 
 export default function PostPage({ post }: any) {
@@ -26,21 +27,15 @@ export default function PostPage({ post }: any) {
                 <section className="mainContent">
                     <div className="maxContentContainer">
                         <div className="col">
-                            <Text
-                                size={60}
-                                weight="bold"
-                                className="post-page-title"
-                            >
-                                {post.title}
-                            </Text>
+                            <h2 className="post-page-title">{post.title}</h2>
                             <CoverImage
                                 title={post.title}
                                 url={post.coverImage.url}
                             />
+                            <DateComponent dateString={post.date} />
                             <Text size={24} className="post-page-content">
                                 {documentToReactComponents(post.content.json)}
                             </Text>
-                            <Text>{post.date}</Text>
                         </div>
                     </div>
                 </section>
