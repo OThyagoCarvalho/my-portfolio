@@ -1,0 +1,32 @@
+.postPreviewContainer {
+  max-width: 47.5%;
+  min-width: 250px;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+
+  @media(max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.postPreviewTitle {
+  margin: 0;
+  font-size: clamp(1.25rem, 1.60vw + 0.80rem, 2rem);
+  line-height: 1;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.postPreviewExcerpt {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-size: clamp(1rem, 0.8vw + 0.92rem, 1.5rem)
+}
+
+.postPreviewTitle img:hover {
+  box-shadow: rgba(104, 112, 118, 0.07) 0px 2px 8px 2px
+}

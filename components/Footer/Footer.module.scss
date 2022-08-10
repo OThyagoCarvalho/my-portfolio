@@ -1,0 +1,42 @@
+.footer {
+  height:  15.625rem;
+  margin-top: 4rem;
+  padding: 0 0 1rem 0;
+}
+
+.maxContentContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1250px;
+  height: 100%;
+
+  @media(max-width: 768px) {    
+    padding: 0 2rem;
+  }
+}
+
+.backToTop {
+  position:absolute;
+  right: 1%;
+  top: - 16px;
+
+}
+
+.credits {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #999;
+
+  p {
+    margin: 0;
+  }
+
+}
