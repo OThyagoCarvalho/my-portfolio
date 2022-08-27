@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Hero from '../components/Hero/Hero';
 import { Col, Container, Row, Text } from '@nextui-org/react';
-import PostPreview from '../components/Post Preview/PostPreview';
+import PostPreview from '../components/PostPreview/PostPreview';
 import { getPostsForHome } from '../services/contentful/lib/api';
 
 const Home: NextPage = ({ preview, allPosts }: any) => {
@@ -34,7 +34,6 @@ const Home: NextPage = ({ preview, allPosts }: any) => {
 
 export async function getStaticProps({ preview = false }) {
     const allPosts = await getPostsForHome(false);
-    console.log(getPostsForHome(false));
     return {
         props: { preview, allPosts }
     };

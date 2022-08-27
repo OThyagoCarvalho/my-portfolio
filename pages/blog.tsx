@@ -1,8 +1,8 @@
 import { Button } from '@nextui-org/react';
 import { NextPage } from 'next';
 import { useState } from 'react';
-import HeroPost from '../components/Hero Post/HeroPost';
-import PostPreview from '../components/Post Preview/PostPreview';
+import HeroPost from '../components/HeroPost/HeroPost';
+import PostPreview from '../components/PostPreview/PostPreview';
 import { getAllPostsForBlog } from '../services/contentful/lib/api';
 import styles from '../styles/BlogPage.module.scss';
 

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import CoverImage from '../Post Components/CoverImage';
-import DateComponent from '../Post Components/DateComponent';
+import CoverImage from '../PostComponents/CoverImage';
+import DateComponent from '../PostComponents/DateComponent';
 import styles from './HeroPost.module.scss';
 
 export default function HeroPost({
