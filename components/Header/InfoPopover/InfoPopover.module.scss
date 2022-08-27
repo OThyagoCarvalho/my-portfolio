@@ -1,0 +1,20 @@
+.modal {
+  margin: 2rem;
+  min-width: fit-content;
+}
+
+.modalBody{
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #111;
+    
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #111;
+    outline: 1px solid slategrey
+  }
+}

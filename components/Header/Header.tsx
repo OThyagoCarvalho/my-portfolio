@@ -2,6 +2,8 @@ import Link from 'next/link';
 import styles from './Header.module.scss';
 import { useTheme, Dropdown, User } from '@nextui-org/react';
 import { AiOutlineMenu } from 'react-icons/ai';
+import InfoPopover from './InfoPopover/InfoPopover';
+import InfoModal from './InfoModal/InfoModal';
 
 export default function Header() {
     const { theme } = useTheme();
@@ -17,7 +19,7 @@ export default function Header() {
             }}
         >
             <div className={styles.maxContentContainer}>
-                <Dropdown placement="bottom-left">
+                {/* <Dropdown placement="bottom-left">
                     <Dropdown.Trigger>
                         <User
                             src="/profile.webp"
@@ -30,12 +32,16 @@ export default function Header() {
                         />
                     </Dropdown.Trigger>
                     <Dropdown.Menu aria-label="Static Actions" color="success">
-                        <Dropdown.Item key="stack">Stack</Dropdown.Item>
+                        <Dropdown.Item key="stack">
+                            <InfoModal link="stack" />
+                        </Dropdown.Item>
                         <Dropdown.Item key="curriculum">
-                            Currículo
+                            Dropdown Item
                         </Dropdown.Item>
                     </Dropdown.Menu>
-                </Dropdown>
+                </Dropdown> */}
+                <InfoPopover />
+
                 <nav>
                     <ul className={styles.navLinksContainer}>
                         <li>
@@ -55,7 +61,7 @@ export default function Header() {
                         <Dropdown placement="bottom-right">
                             <Dropdown.Trigger>
                                 <a>
-                                    <AiOutlineMenu />
+                                    <AiOutlineMenu size="24px" />
                                 </a>
                             </Dropdown.Trigger>
                             <Dropdown.Menu
