@@ -12,14 +12,13 @@ export default function Hero() {
                     h1
                     css={{
                         color: "$green800",
-                        // textGradient: '360deg, $green700 -20%, $green900 90%',
-                        lineHeight: theme?.lineHeights.xs.value,
+                        lineHeight: theme?.lineHeights.sm.value,
                         textAlign: 'justify',                                          
                         padding: theme?.space[2].value
                     }}
                 >
                     Sou Thyago e este é meu espaço para compartilhar
-                    ideias, conhecimentos, projetos e experiências.
+                    ideias, projetos e experiências.
                 </Text>
             </div>
         </section>
