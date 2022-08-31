@@ -37,7 +37,7 @@ export default function InfoModal({ link }: InfoModalProps) {
                         Cras mattis consectetur purus sit amet fermentum.
                     </Text>
                 </Modal.Body>
-                <Modal.Footer>footer</Modal.Footer>
+                {/* <Modal.Footer>footer</Modal.Footer> */}
             </Modal>
         </>
     );

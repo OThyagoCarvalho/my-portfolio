@@ -1,5 +1,6 @@
 import { Popover, Button, Text, User, Modal } from '@nextui-org/react';
 import { useState } from 'react';
+import CvComponent from '../../CvComponent/CvComponent';
 import StackComponent from '../../StackComponent/StackComponent';
 import InfoModal from '../InfoModal/InfoModal';
 import styles from './InfoPopover.module.scss';
@@ -7,16 +8,17 @@ import styles from './InfoPopover.module.scss';
 export default function InfoPopover() {
     const [isOpen, setIsOpen] = useState(false);
     const [visible, setVisible] = useState(false);
+    const [cvVisible, setCvVisible] = useState(false);
 
     const toggleVisibility = () => {
         setVisible(!visible);
-        setIsOpen(false);
-        console.log(visible);
+        setIsOpen(false); // workaround to avoid overlapping
     };
 
-    // const handleCloseModal = () => {
-    //     setVisible(false);
-    // };
+    const toggleCvVisibility = () => {
+        setCvVisible(!cvVisible);
+        setIsOpen(false); // workaround to avoid overlapping
+    };
 
     return (
         <>
@@ -37,7 +39,22 @@ export default function InfoPopover() {
                     />
                 </Popover.Trigger>
                 <Popover.Content>
-                    <Button onClick={toggleVisibility}> Stack </Button>
+                    <div className={styles.popoverOpenContentContainer}>
+                        <button
+                            className={styles.popoverButton}
+                            onClick={toggleVisibility}
+                        >
+                            {' '}
+                            Stack{' '}
+                        </button>
+                        <button
+                            className={styles.popoverButton}
+                            onClick={toggleCvVisibility}
+                        >
+                            {' '}
+                            Currículo{' '}
+                        </button>
+                    </div>
                 </Popover.Content>
             </Popover>
 
@@ -49,8 +66,8 @@ export default function InfoPopover() {
                 open={visible}
                 onClose={() => setVisible(false)}
                 closeButton
-                aria-labelledby="modal-title"
-                aria-describedby="modal-description"
+                aria-labelledby="stack"
+                aria-describedby="skills"
             >
                 <Modal.Header>
                     <Text id="modal-title" size={18}>
@@ -60,7 +77,29 @@ export default function InfoPopover() {
                 <Modal.Body className={styles.modalBody}>
                     <StackComponent />
                 </Modal.Body>
-                <Modal.Footer>footer</Modal.Footer>
+                {/* <Modal.Footer>footer</Modal.Footer> */}
+            </Modal>
+
+            <Modal
+                css={{ zIndex: '999' }}
+                scroll
+                blur
+                className={styles.modal}
+                open={cvVisible}
+                onClose={() => setCvVisible(false)}
+                closeButton
+                aria-labelledby="stack"
+                aria-describedby="skills"
+            >
+                <Modal.Header>
+                    <Text id="modal-title" size={18}>
+                        Currículo
+                    </Text>
+                </Modal.Header>
+                <Modal.Body className={styles.modalBody}>
+                    <CvComponent />
+                </Modal.Body>
+                {/* <Modal.Footer>footer</Modal.Footer> */}
             </Modal>
         </>
     );
