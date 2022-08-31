@@ -66,6 +66,14 @@
   }
 }
 
+.mobileMenuLink {
+  width: 100%;
+}
+
+.mobileMenuOpenContainer {
+  width: fit-content;
+}
+
 .maxContentContainer {
   display: flex;
   justify-content: space-between;
@@ -80,7 +88,7 @@
     padding: 0 2rem;
   }
 
-  @media(max-width: 414px) {
-    padding: 0 0.5rem;
-  }
+  // @media(max-width: 414px) {
+  //   padding: 0 1rem;
+  // }
 }

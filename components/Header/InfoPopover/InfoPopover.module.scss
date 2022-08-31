@@ -1,0 +1,43 @@
+.modal {
+  margin: 2rem;
+  min-width: fit-content;
+}
+
+.modalBody{
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #111;
+    
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #111;
+    outline: 1px solid slategrey
+  }
+}
+
+.popoverOpenContentContainer {
+  width: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;  
+  align-items: flex-start;
+}
+
+.popoverButton {
+  font-size: 1rem;
+  font-weight: 400;
+  height: 36px;
+  padding: 0 12px;
+  line-height: 28px;
+  background-color: rgba(0,0,0,0);  
+  border: none;  
+}
+
+.popoverButton:hover {
+  color: rgb(19, 164, 82);
+}

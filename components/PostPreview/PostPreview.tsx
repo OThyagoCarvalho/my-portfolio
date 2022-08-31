@@ -1,7 +1,7 @@
 import { Text } from '@nextui-org/react';
 import Link from 'next/link';
-import CoverImage from '../Post Components/CoverImage';
-import DateComponent from '../Post Components/DateComponent';
+import CoverImage from '../PostComponents/CoverImage';
+import DateComponent from '../PostComponents/DateComponent';
 import styles from './PostPreview.module.scss';
 
 export default function PostPreview({

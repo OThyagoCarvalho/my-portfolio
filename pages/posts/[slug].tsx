@@ -10,8 +10,8 @@ import {
 //  treating post content
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
-import CoverImage from '../../components/Post Components/CoverImage';
-import DateComponent from '../../components/Post Components/DateComponent';
+import CoverImage from '../../components/PostComponents/CoverImage';
+import DateComponent from '../../components/PostComponents/DateComponent';
 // import RichTextAsset from './rich-text-asset'
 
 export default function PostPage({ post }: any) {
