@@ -10,9 +10,9 @@ import {
 //  treating post content
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
+// import RichTextAsset from './rich-text-asset'
 import CoverImage from '../../components/PostComponents/CoverImage';
 import DateComponent from '../../components/PostComponents/DateComponent';
-// import RichTextAsset from './rich-text-asset'
 
 export default function PostPage({ post }: any) {
     const router = useRouter();
@@ -22,7 +22,11 @@ export default function PostPage({ post }: any) {
     return (
         <>
             {router.isFallback ? (
-                <Loading />
+                <section className="mainContent">
+                    <div className="maxContentContainer">
+                        <Loading color="success" />
+                    </div>
+                </section>
             ) : (
                 <section className="mainContent">
                     <div className="maxContentContainer">
