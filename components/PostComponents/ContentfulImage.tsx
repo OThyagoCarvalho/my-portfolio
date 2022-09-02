@@ -6,7 +6,7 @@ const contentfulLoader = ({ src, width, quality }: any) => {
 
 const ContentfulImage = (props: any) => {
   // eslint-disable-next-line jsx-a11y/alt-text
-  return <Image style={{filter: 'grayscale(100%)'}} loader={contentfulLoader} {...props} />
+  return <Image loader={contentfulLoader} {...props} />
 }
 
 export default ContentfulImage
