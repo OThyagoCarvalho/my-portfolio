@@ -12,6 +12,8 @@ export default function PostPreview({
     author,
     slug
 }: any) {
+    const normalizedExcerpt =
+        excerpt < 150 ? excerpt : excerpt.substring(0, 150) + '...';
     return (
         <div className={styles.postPreviewContainer}>
             <div>
@@ -22,7 +24,7 @@ export default function PostPreview({
                     <a aria-label={title}>{title}</a>
                 </Link>
             </p>
-            <p className={styles.postPreviewExcerpt}>{excerpt}</p>
+            <p className={styles.postPreviewExcerpt}>{normalizedExcerpt}</p>
 
             <div>
                 <Text h6>{author}</Text>
