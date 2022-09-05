@@ -20,7 +20,6 @@ export default function Header() {
         >
             <div className={styles.maxContentContainer}>
                 <InfoPopover />
-
                 <nav>
                     <ul className={styles.navLinksContainer}>
                         <li>
@@ -48,37 +47,26 @@ export default function Header() {
                                 // aria-label="Static Actions"
                                 color="success"
                             >
-                                <Dropdown.Item textValue="home" key="home">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Home
-                                    </Link>
+                                <Dropdown.Item
+                                    textValue="home"
+                                    key="home"
+                                    className={styles.mobileMenuLink}
+                                >
+                                    <Link href="/">Home</Link>
                                 </Dropdown.Item>
-                                <Dropdown.Item textValue="blog" key="blog">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/blog"
-                                    >
-                                        Blog
-                                    </Link>
+                                <Dropdown.Item
+                                    className={styles.mobileMenuLink}
+                                    textValue="blog"
+                                    key="blog"
+                                >
+                                    <Link href="/blog">Blog</Link>
                                 </Dropdown.Item>
-                                <Dropdown.Item textValue="utilidades" key="utilidades">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Utilidades
-                                    </Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item textValue="portfolio" key="portfolio">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Portfólio
-                                    </Link>
+                                <Dropdown.Item
+                                    textValue="portfolio"
+                                    key="portfolio"
+                                    className={styles.mobileMenuLink}
+                                >
+                                    <Link href="/">Portfólio</Link>
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
