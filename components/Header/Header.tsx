@@ -36,7 +36,7 @@ export default function Header() {
                         </li>
                     </ul>
                     <div className={styles.mobileMenu}>
-                        <Dropdown placement="bottom-right">
+                        <Dropdown disableAnimation placement="bottom-right">
                             <Dropdown.Trigger>
                                 <a>
                                     <AiOutlineMenu size="24px" />
@@ -44,8 +44,7 @@ export default function Header() {
                             </Dropdown.Trigger>
                             <Dropdown.Menu
                                 className={styles.mobileMenuOpenContainer}
-                                // aria-label="Static Actions"
-                                color="success"
+                                arial-label="Menu"
                             >
                                 <Dropdown.Item
                                     textValue="home"
