@@ -4,6 +4,7 @@ import { useTheme, Dropdown, User } from '@nextui-org/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import InfoPopover from './InfoPopover/InfoPopover';
 import InfoModal from './InfoModal/InfoModal';
+import NavbarComponent from '../Navbar/Navbar';
 
 export default function Header() {
     const { theme } = useTheme();
@@ -20,7 +21,7 @@ export default function Header() {
         >
             <div className={styles.maxContentContainer}>
                 <InfoPopover />
-                <nav>
+                {/* <nav>
                     <ul className={styles.navLinksContainer}>
                         <li>
                             <Link href="/">Home</Link>
@@ -70,7 +71,8 @@ export default function Header() {
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                </nav>
+                </nav> */}
+                <NavbarComponent />
             </div>
         </header>
     );
