@@ -52,11 +52,7 @@
 .mobileMenu {
 
   li {
-    width: 100%;
-    a {
-      width: 100%;
-    }
-  }
+    width: 100%;  }
 
   a {
     width: 100%;
@@ -68,10 +64,20 @@
 
 .mobileMenuLink {
   width: 100%;
+  font-size: 1.25rem;
 }
 
 .mobileMenuOpenContainer {
   width: fit-content;
+
+  li {
+    span {
+      width: 100%;
+      a {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .maxContentContainer {
@@ -88,7 +94,4 @@
     padding: 0 2rem;
   }
 
-  // @media(max-width: 414px) {
-  //   padding: 0 1rem;
-  // }
 }

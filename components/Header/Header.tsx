@@ -4,6 +4,7 @@ import { useTheme, Dropdown, User } from '@nextui-org/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import InfoPopover from './InfoPopover/InfoPopover';
 import InfoModal from './InfoModal/InfoModal';
+import NavbarComponent from '../Navbar/Navbar';
 
 export default function Header() {
     const { theme } = useTheme();
@@ -20,8 +21,7 @@ export default function Header() {
         >
             <div className={styles.maxContentContainer}>
                 <InfoPopover />
-
-                <nav>
+                {/* <nav>
                     <ul className={styles.navLinksContainer}>
                         <li>
                             <Link href="/">Home</Link>
@@ -37,7 +37,7 @@ export default function Header() {
                         </li>
                     </ul>
                     <div className={styles.mobileMenu}>
-                        <Dropdown placement="bottom-right">
+                        <Dropdown disableAnimation placement="bottom-right">
                             <Dropdown.Trigger>
                                 <a>
                                     <AiOutlineMenu size="24px" />
@@ -45,45 +45,34 @@ export default function Header() {
                             </Dropdown.Trigger>
                             <Dropdown.Menu
                                 className={styles.mobileMenuOpenContainer}
-                                // aria-label="Static Actions"
-                                color="success"
+                                arial-label="Menu"
                             >
-                                <Dropdown.Item textValue="home" key="home">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Home
-                                    </Link>
+                                <Dropdown.Item
+                                    textValue="home"
+                                    key="home"
+                                    className={styles.mobileMenuLink}
+                                >
+                                    <Link href="/">Home</Link>
                                 </Dropdown.Item>
-                                <Dropdown.Item textValue="blog" key="blog">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/blog"
-                                    >
-                                        Blog
-                                    </Link>
+                                <Dropdown.Item
+                                    className={styles.mobileMenuLink}
+                                    textValue="blog"
+                                    key="blog"
+                                >
+                                    <Link href="/blog">Blog</Link>
                                 </Dropdown.Item>
-                                <Dropdown.Item textValue="utilidades" key="utilidades">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Utilidades
-                                    </Link>
-                                </Dropdown.Item>
-                                <Dropdown.Item textValue="portfolio" key="portfolio">
-                                    <Link
-                                        className={styles.mobileMenuLink}
-                                        href="/"
-                                    >
-                                        Portfólio
-                                    </Link>
+                                <Dropdown.Item
+                                    textValue="portfolio"
+                                    key="portfolio"
+                                    className={styles.mobileMenuLink}
+                                >
+                                    <Link href="/">Portfólio</Link>
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                </nav>
+                </nav> */}
+                <NavbarComponent />
             </div>
         </header>
     );

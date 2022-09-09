@@ -8,7 +8,7 @@ interface InfoModalProps {
 
 export default function InfoModal({ link }: InfoModalProps) {
     const [visible, setVisible] = useState(false);
-    
+
     const toggleVisibility = () => {
         setVisible(!visible);
     };
@@ -37,7 +37,10 @@ export default function InfoModal({ link }: InfoModalProps) {
                         Cras mattis consectetur purus sit amet fermentum.
                     </Text>
                 </Modal.Body>
-                {/* <Modal.Footer>footer</Modal.Footer> */}
+                {/* 
+                // in case I want to add a footer: uncomment the following line
+                <Modal.Footer>footer</Modal.Footer> 
+                */}
             </Modal>
         </>
     );

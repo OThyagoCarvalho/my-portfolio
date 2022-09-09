@@ -99,7 +99,10 @@ export default function InfoPopover() {
                 <Modal.Body className={styles.modalBody}>
                     <CvComponent />
                 </Modal.Body>
-                {/* <Modal.Footer>footer</Modal.Footer> */}
+                {/* 
+                // in case I want to add a footer: uncomment the following line
+                <Modal.Footer>footer</Modal.Footer> 
+                */}
             </Modal>
         </>
     );
