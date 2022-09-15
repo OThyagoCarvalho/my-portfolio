@@ -31,6 +31,7 @@ content {
   }
 }
 `
+// used to fetch data on author of the post, currently crashing.
 // author {
 //   name
 //   picture {
