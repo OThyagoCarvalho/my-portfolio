@@ -8,8 +8,7 @@ import NavbarComponent from '../components/Navbar/Navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <NextUIProvider>
-            {/* <Header/> */}
+        <NextUIProvider>            
             <NavbarComponent />
             <Component {...pageProps} />   
             <Footer />         
