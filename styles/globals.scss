@@ -57,12 +57,18 @@ a {
 
 }
 
-/* .coverImage {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
-  border: none;
-  height: auto;
-  width: 100%;
-} */
+.codeBlock {
+  width: inherit;
+  background-color: #111;
+  color: white;
+}
+
+.codeText {
+  background-color: inherit;
+  color: #17c964;
+  font-weight: bold;
+}
+
 
 .post-page-title {
   margin-top: 1rem;
@@ -85,6 +91,7 @@ a {
   }
 }
 
+// Useful to add dark theme switch
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

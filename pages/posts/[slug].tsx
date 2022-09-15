@@ -9,10 +9,21 @@ import {
 
 //  treating post content
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+
+// Used to render images inside the post
 // import RichTextAsset from './rich-text-asset'
+// see example at: https://github.com/vercel/next.js/blob/canary/examples/cms-contentful/components/rich-text-asset.js
+
 import CoverImage from '../../components/PostComponents/CoverImage';
 import DateComponent from '../../components/PostComponents/DateComponent';
+
+const Code = ({ children }: any) => <pre className="codeBlock"><code className="codeText" > {children} </code></pre>;
+
+const options = {
+    renderMark: { [MARKS.CODE]: (code: any) => <Code>{code}</Code>
+
+}    };
 
 export default function PostPage({ post }: any) {
     const router = useRouter();
@@ -38,7 +49,10 @@ export default function PostPage({ post }: any) {
                             />
                             <DateComponent dateString={post.date} />
                             <Text size={24} className="post-page-content">
-                                {documentToReactComponents(post.content.json)}
+                                {documentToReactComponents(
+                                    post.content.json,
+                                    options
+                                )}
                             </Text>
                         </div>
                     </div>
@@ -50,7 +64,6 @@ export default function PostPage({ post }: any) {
 
 export async function getStaticProps({ params, preview = false }: any) {
     const data = await getPostAndMorePosts(params.slug, preview);
-    console.log(data);
     return {
         props: {
             preview,
