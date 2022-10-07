@@ -27,8 +27,7 @@ export default function NavbarComponent() {
                         Home
                     </Navbar.Link>
                     <Navbar.Link href="/blog">Blog</Navbar.Link>
-                    <Navbar.Link href="/">Utilizades</Navbar.Link>
-                    <Navbar.Link href="/">Portfólio</Navbar.Link>
+                    <Navbar.Link href="/portfolio">Portfólio</Navbar.Link>
                 </Navbar.Content>
                 <Navbar.Collapse>
                     <Navbar.CollapseItem>
@@ -59,20 +58,9 @@ export default function NavbarComponent() {
                             css={{
                                 minWidth: '100%'
                             }}
-                            href="/blog"
+                            href="/portfolio"
                         >
                             Portfólio
-                        </Link>
-                    </Navbar.CollapseItem>
-                    <Navbar.CollapseItem>
-                        <Link
-                            color="success"
-                            css={{
-                                minWidth: '100%'
-                            }}
-                            href="/blog"
-                        >
-                            Utilidades
                         </Link>
                     </Navbar.CollapseItem>
                 </Navbar.Collapse>
