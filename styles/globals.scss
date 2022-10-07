@@ -61,12 +61,17 @@ a {
   width: inherit;
   background-color: #111;
   color: white;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;  
 }
 
 .codeText {
   background-color: inherit;
   color: #17c964;
   font-weight: bold;
+  max-width: 100%;
 }
 
 

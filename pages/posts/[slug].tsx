@@ -18,12 +18,17 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import CoverImage from '../../components/PostComponents/CoverImage';
 import DateComponent from '../../components/PostComponents/DateComponent';
 
-const Code = ({ children }: any) => <pre className="codeBlock"><code className="codeText" > {children} </code></pre>;
+const Code = ({ children }: any) => (
+    <div className="codeBlock">
+        <code className="codeText"> {children} </code>
+    </div>
+);
 
 const options = {
-    renderMark: { [MARKS.CODE]: (code: any) => <Code>{code}</Code>
-
-}    };
+    renderMark: {
+        [MARKS.CODE]: (code: any) => <Code>{code}</Code>
+    }
+};
 
 export default function PostPage({ post }: any) {
     const router = useRouter();
