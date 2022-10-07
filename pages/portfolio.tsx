@@ -18,7 +18,7 @@ export default function Portfolio() {
                             />
                         </div>
                         <Collapse
-                            title={<Text h4> D'Ink Tattoo Studio</Text>}
+                            title={<Text h4> {`D'Ink Tattoo Studio`} </Text>}
                             subtitle={
                                 <p className={styles.projectSubtitle}>
                                     Landing Page/ Web page -
@@ -70,7 +70,7 @@ export default function Portfolio() {
                                 Landing page responsiva desenvolvida com
                                 ReactJs, Gatsby.js, Styled Components e com
                                 elementos dinâmicos,
-                                <i>"Accordion/Collapsible" e Carrossel</i>,
+                                <i>{`"Accordion/Collapsible" e Carrossel`}</i>,
                                 importados da MUI (Antigo Material UI).
                             </Text>
                         </Collapse>
@@ -91,7 +91,9 @@ export default function Portfolio() {
                             }
                             subtitle={
                                 <div className={styles.projectSubtitle}>
-                                    <p className={styles.subtitleText}>Dashboard/ SaaS </p>
+                                    <p className={styles.subtitleText}>
+                                        Dashboard/ SaaS{' '}
+                                    </p>
                                     <p className={styles.tag}>
                                         em desenvolvimento
                                     </p>
