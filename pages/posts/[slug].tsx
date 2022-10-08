@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import { Loading, Text, useTheme } from '@nextui-org/react';
+import { Loading, Text } from '@nextui-org/react';
 
 import {
     getAllPostsWithSlug,
@@ -9,7 +9,7 @@ import {
 
 //  treating post content
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { INLINES, MARKS } from '@contentful/rich-text-types';
 
 // Used to render images inside the post
 // import RichTextAsset from './rich-text-asset'
@@ -18,6 +18,7 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import CoverImage from '../../components/PostComponents/CoverImage';
 import DateComponent from '../../components/PostComponents/DateComponent';
 
+// Code block component bellow
 const Code = ({ children }: any) => (
     <div className="codeBlock">
         <code className="codeText"> {children} </code>
@@ -27,6 +28,22 @@ const Code = ({ children }: any) => (
 const options = {
     renderMark: {
         [MARKS.CODE]: (code: any) => <Code>{code}</Code>
+    },
+
+    // hyperlink block component bellow
+    renderNode: {
+        [INLINES.HYPERLINK]: (node: any) => {
+            return (
+                <span className="styledLink">
+                    <a href={node.data.uri} target="_blank" rel="noreferrer">
+                        {JSON.stringify(node.content[0].value).replace(
+                            /"/g,
+                            ''
+                        )}
+                    </a>
+                </span>
+            );
+        }
     }
 };
 
