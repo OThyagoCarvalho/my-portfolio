@@ -7,7 +7,7 @@ export default function NavbarComponent() {
     const collapseItems = ['Home', 'Blog', 'Utilidades', 'Portfólio'];
 
     return (
-        <Navbar variant="sticky">
+        <Navbar variant="static">
             <div className={styles.maxContentContainer}>
                 <Navbar.Brand>
                     <InfoPopover />
