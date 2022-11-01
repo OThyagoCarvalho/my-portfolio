@@ -1,0 +1,33 @@
+.maxContentContainer {
+  margin:  0 auto;
+  padding: 0 1rem;
+  max-width: 1250px;
+  width: 100%;
+  height: 100%;  
+
+  @media(max-width: 768px) {    
+    padding: 0 1rem;
+  }
+}
+
+.portfolioSection {
+  padding: 2rem 0;
+  height: calc(100vh - 22.5rem);
+  min-height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.table {
+  font-size: 0.85rem;
+}
+
+.link + .link {
+  margin-left: 1rem;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
